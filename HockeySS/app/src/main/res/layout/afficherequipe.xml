@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Afficher équipe"
+        android:id="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom d&apos;équipe"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ville"
+        android:id="@+id/textView13"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ligue"
+        android:id="@+id/textView14"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_toEndOf="@+id/textView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entraîneur"
+        android:id="@+id/textView15"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gérant"
+        android:id="@+id/textView16"
+        android:layout_alignTop="@+id/textView15"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préposé sécurité"
+        android:id="@+id/textView17"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_alignStart="@+id/textView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assistant entraîneur 1"
+        android:id="@+id/textView18"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/textView15"
+        android:layout_toStartOf="@+id/textView16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assistant entraîneur 2"
+        android:id="@+id/textView19"
+        android:layout_alignTop="@+id/textView18"
+        android:layout_alignEnd="@+id/textView17" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Afficher joueur"
+        android:id="@+id/button13"
+        android:layout_below="@+id/textView18"
+        android:layout_alignStart="@+id/button14" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modifier joueur"
+        android:id="@+id/button14"
+        android:layout_below="@+id/button15"
+        android:layout_alignStart="@+id/textView11" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retirer joueur"
+        android:id="@+id/button15"
+        android:layout_below="@+id/button13"
+        android:layout_alignEnd="@+id/button14"
+        android:layout_alignStart="@+id/button13" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:id="@+id/button16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button14"
+        android:layout_toStartOf="@+id/textView17" />
+
+</RelativeLayout>

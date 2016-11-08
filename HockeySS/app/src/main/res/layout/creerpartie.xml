@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Créer une partie"
+        android:id="@+id/textView23"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Équipe Visiteur"
+        android:id="@+id/textView24"
+        android:layout_weight="1"
+        android:layout_marginBottom="77dp"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Équipe Locale"
+        android:id="@+id/textView25"
+        android:layout_weight="1"
+        android:layout_alignTop="@+id/textView24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="81dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="190dp">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView23"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="48dp"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ligue"
+            android:id="@+id/textView26" />
+
+        <Spinner
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner4" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numéro partie"
+        android:id="@+id/textView27"
+        android:layout_alignTop="@+id/linearLayout2"
+        android:layout_alignStart="@+id/textView25" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText8"
+        android:layout_below="@+id/textView27"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView27" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer partie"
+        android:id="@+id/button23"
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/textView24"
+        android:layout_alignEnd="@+id/linearLayout2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:id="@+id/button24"
+        android:layout_alignTop="@+id/button23"
+        android:layout_toEndOf="@+id/button23" />
+
+</RelativeLayout>
