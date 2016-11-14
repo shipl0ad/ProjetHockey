@@ -20,62 +20,62 @@
         android:layout_marginTop="32dp" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView" >
-
-    </ScrollView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
         android:layout_below="@+id/textView">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gestion des parties"
-            android:id="@+id/button1"
-            android:layout_alignParentTop="true"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="106dp" />
+            android:layout_below="@+id/textView">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gestion des équipes"
-            android:id="@+id/button2"
-            android:layout_below="@+id/button1"
-            android:layout_centerHorizontal="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestion des parties"
+                android:id="@+id/button1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="106dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gestion des joueurs"
-            android:id="@+id/button3"
-            android:layout_below="@+id/button2"
-            android:layout_alignEnd="@+id/button2"
-            android:layout_alignStart="@+id/button2" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestion des équipes"
+                android:id="@+id/button2"
+                android:layout_below="@+id/button1"
+                android:layout_centerHorizontal="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Statistiques"
-            android:id="@+id/button10"
-            android:layout_below="@+id/button3"
-            android:layout_alignStart="@+id/button3"
-            android:layout_alignEnd="@+id/button3" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestion des joueurs"
+                android:id="@+id/button3"
+                android:layout_below="@+id/button2"
+                android:layout_alignEnd="@+id/button2"
+                android:layout_alignStart="@+id/button2" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quitter"
-            android:id="@+id/button4"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="54dp"
-            android:layout_alignEnd="@+id/button10"
-            android:layout_alignStart="@+id/button10" />
-    </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistiques"
+                android:id="@+id/button10"
+                android:layout_below="@+id/button3"
+                android:layout_alignStart="@+id/button3"
+                android:layout_alignEnd="@+id/button3" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quitter"
+                android:id="@+id/button4"
+                android:layout_below="@+id/button3"
+                android:layout_marginTop="54dp"
+                android:layout_alignEnd="@+id/button10"
+                android:layout_alignStart="@+id/button10" />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
