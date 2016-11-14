@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gestion des parties"
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="106dp" />
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Gestion des équipes"
         android:id="@+id/button2"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true" />
 
     <Button
