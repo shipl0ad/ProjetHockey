@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Créer un joueur"
+        android:id="@+id/textView29"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prénom"
+        android:id="@+id/textView28"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/textView29"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText9"
+        android:layout_below="@+id/textView28"
+        android:layout_alignStart="@+id/textView28"
+        android:layout_toStartOf="@+id/textView29" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom"
+        android:id="@+id/textView30"
+        android:layout_alignTop="@+id/textView28"
+        android:layout_alignStart="@+id/textView29"
+        android:layout_marginStart="56dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText10"
+        android:layout_alignTop="@+id/editText9"
+        android:layout_alignStart="@+id/textView30"
+        android:layout_alignEnd="@+id/textView29" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        android:id="@+id/textView31"
+        android:layout_below="@+id/editText9"
+        android:layout_alignStart="@+id/editText9"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numéro"
+        android:id="@+id/textView32"
+        android:layout_alignTop="@+id/textView31"
+        android:layout_alignStart="@+id/editText10" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText11"
+        android:layout_below="@+id/textView31"
+        android:layout_alignStart="@+id/textView31"
+        android:layout_alignEnd="@+id/editText9" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText12"
+        android:layout_alignTop="@+id/editText11"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_alignEnd="@+id/textView29" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="300dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créer le joueur"
+                android:id="@+id/button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="34dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retour"
+                android:id="@+id/button25"
+                android:layout_gravity="right"
+                android:layout_alignBaseline="@+id/button"
+                android:layout_alignBottom="@+id/button"
+                android:layout_toEndOf="@+id/button"
+                android:layout_marginStart="55dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
