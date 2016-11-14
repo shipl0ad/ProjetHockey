@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gestion des équipes"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="185dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_row="8"
+            android:layout_column="11">
+
+            <Button
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:text="Créer Équipe"
+                android:id="@+id/button5"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier équipe"
+                android:id="@+id/button6"
+                android:layout_row="6"
+                android:layout_column="0" />
+
+            <Button
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:text="Retirer équipe"
+                android:id="@+id/button7"
+                android:layout_row="0"
+                android:layout_column="17" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Afficher Équipe"
+                android:id="@+id/button8"
+                android:layout_row="6"
+                android:layout_column="17" />
+        </GridLayout>
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:id="@+id/button11"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp" />
+
+</RelativeLayout>

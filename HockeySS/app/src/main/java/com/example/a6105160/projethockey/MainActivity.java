@@ -1,5 +1,6 @@
 package com.example.a6105160.projethockey;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,15 +14,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    Button button4 = (Button) findViewById(R.id.button4);
-        button4.setOnClickListener(new OnClickListener() {
+        Button boutonGestionEquipes = (Button) findViewById(R.id.button2);
+        boutonGestionEquipes.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, GestionEquipesActivity.class);
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
 
+        Button boutonGestionJoueurs = (Button) findViewById(R.id.button3);
+        boutonGestionJoueurs.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, GestionJoueursActivity.class);
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button boutonQuitter = (Button) findViewById(R.id.button4);
+        boutonQuitter.setOnClickListener(new OnClickListener() {
         @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            finish();
-            System.exit(0);
-        }
-    });
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
     }
 }
