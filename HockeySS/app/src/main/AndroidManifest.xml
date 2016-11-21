@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".GestionEquipesActivity" />
-        <activity android:name=".GestionJoueursActivity"></activity>
+        <activity android:name=".GestionJoueursActivity" />
+        <activity android:name=".feuille_pointageActivity"></activity>
     </application>
 
 </manifest>
