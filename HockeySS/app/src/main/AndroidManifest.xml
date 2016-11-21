@@ -19,6 +19,7 @@
         <activity android:name=".GestionJoueursActivity" />
         <activity android:name=".GestionPartiesActivity" />
         <activity android:name=".CreerJoueurActivity"></activity>
+        <activity android:name=".feuille_pointageActivity"></activity>
     </application>
 
 </manifest>
