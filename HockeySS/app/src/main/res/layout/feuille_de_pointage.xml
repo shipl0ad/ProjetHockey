@@ -5,6 +5,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="20:00"
+        android:id="@+id/textView33"
+        android:height="50dp"
+        android:textSize="50dp"
+        android:layout_alignBottom="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
         android:id="@+id/textView36"
@@ -42,17 +53,6 @@
         android:layout_gravity="center_vertical"
         android:layout_alignTop="@+id/textView34"
         android:layout_alignEnd="@+id/button30" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20:00"
-        android:id="@+id/textView33"
-        android:height="50dp"
-        android:textSize="50dp"
-        android:layout_alignBottom="@+id/linearLayout3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="65dp" />
 
     <LinearLayout
         android:orientation="horizontal"

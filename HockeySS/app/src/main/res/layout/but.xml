@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="BUT"
+            android:id="@+id/textView48"
+            android:layout_marginTop="57dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner6"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/textView48"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText15"
+            android:layout_above="@+id/editText16"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView48" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText16"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/editText15" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText17"
+            android:layout_below="@+id/editText16"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="# JOUEUR"
+            android:id="@+id/textView49"
+            android:layout_alignTop="@+id/editText15"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="# JOUEUR PASSE"
+            android:id="@+id/textView50"
+            android:layout_above="@+id/editText17"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="# JOUEUR PASSE"
+            android:id="@+id/textView51"
+            android:layout_alignBottom="@+id/editText17"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUT"
+            android:id="@+id/button42"
+            android:layout_below="@+id/textView51"
+            android:layout_alignStart="@+id/spinner6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETOUR"
+            android:id="@+id/button43"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/textView48"
+            android:layout_marginBottom="37dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
