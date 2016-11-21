@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="PÉNALITÉ"
+            android:id="@+id/textView45"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="57dp" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5"
+            android:layout_below="@+id/textView45"
+            android:layout_alignStart="@+id/textView45" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText13"
+            android:layout_below="@+id/spinner5"
+            android:layout_toEndOf="@+id/button41" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText14"
+            android:layout_below="@+id/editText13"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/editText13" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DONNER LA PÉNALITÉ"
+            android:id="@+id/button40"
+            android:layout_below="@+id/editText14"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETOUR"
+            android:id="@+id/button41"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="JOUEUR #"
+            android:id="@+id/textView46"
+            android:layout_above="@+id/editText14"
+            android:layout_alignStart="@+id/button40" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="CODE D&apos;INFRACTION"
+            android:id="@+id/textView47"
+            android:layout_above="@+id/button40"
+            android:layout_toStartOf="@+id/editText14" />
+    </RelativeLayout>
+</RelativeLayout>
