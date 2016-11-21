@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GestionEquipesActivity" />
-        <activity android:name=".GestionJoueursActivity"></activity>
+        <activity android:name=".GestionJoueursActivity" />
+        <activity android:name=".GestionPartiesActivity" />
+        <activity android:name=".CreerJoueurActivity"></activity>
     </application>
 
 </manifest>

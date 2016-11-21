@@ -13,7 +13,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="185dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -21,7 +22,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="52dp">
+        android:layout_marginTop="52dp"
+        android:id="@+id/gridLayout">
 
         <GridLayout
             android:layout_width="match_parent"
@@ -62,6 +64,25 @@
                 android:layout_column="17" />
         </GridLayout>
     </GridLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_toStartOf="@+id/button18"
+        android:layout_alignEnd="@+id/button19"
+        android:layout_above="@+id/button11"
+        android:layout_below="@+id/gridLayout"
+        android:paddingTop="20px"
+        android:paddingBottom="20px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste des joueurs"
+        android:id="@+id/textView21"
+        android:layout_alignTop="@+id/listView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"

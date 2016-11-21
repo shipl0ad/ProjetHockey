@@ -1,5 +1,6 @@
 package com.example.a6105160.projethockey;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,8 +13,17 @@ public class GestionJoueursActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_joueurs);
 
-        Button buttonRetour = (Button) findViewById(R.id.button18);
-        buttonRetour.setOnClickListener(new View.OnClickListener() {
+        Button boutonCreation = (Button) findViewById(R.id.button17);
+        boutonCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(GestionJoueursActivity.this, CreerJoueurActivity.class);
+                GestionJoueursActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button boutonRetour = (Button) findViewById(R.id.button18);
+        boutonRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
