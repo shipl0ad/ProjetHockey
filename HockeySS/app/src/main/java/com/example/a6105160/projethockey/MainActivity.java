@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button boutonGestionParties = (Button) findViewById(R.id.button1);
+        boutonGestionParties.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, GestionPartiesActivity.class);
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
         Button boutonQuitter = (Button) findViewById(R.id.button4);
         boutonQuitter.setOnClickListener(new OnClickListener() {
         @Override

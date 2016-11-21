@@ -6,28 +6,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GestionPartiesActivity extends AppCompatActivity {
+public class CreerPartiesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gestion_parties);
+        setContentView(R.layout.creerpartie);
 
-        Button boutonCreationPartie = (Button) findViewById(R.id.button20);
+        Button boutonCreationPartie = (Button) findViewById(R.id.button23);
         boutonCreationPartie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(GestionPartiesActivity.this, CreerPartiesActivity.class);
-                GestionPartiesActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(CreerPartiesActivity.this, feuille_pointageActivity.class);
+                CreerPartiesActivity.this.startActivity(myIntent);
             }
         });
 
-        Button boutonRetour = (Button) findViewById(R.id.button21);
+
+        Button boutonRetour = (Button) findViewById(R.id.button24);
         boutonRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
+
+
+
     }
 }
