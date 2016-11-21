@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GestionEquipesActivity extends AppCompatActivity {
+public class GestionPartiesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gestion_equipes);
-
-        Button boutonRetour = (Button) findViewById(R.id.button11);
+        setContentView(R.layout.activity_gestion_parties);
+        Button boutonRetour = (Button) findViewById(R.id.button21);
         boutonRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
