@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="STATISTIQUES DES GUARDIENS"
+                android:id="@+id/textView52"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/linearLayout4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Local"
+                android:id="@+id/textView53"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="TIRS"
+                android:id="@+id/textView55"
+                android:layout_marginLeft="200dp" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="BUTS"
+                android:id="@+id/textView56"
+                android:layout_marginLeft="300dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ère période"
+                android:id="@+id/textView54" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText18"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="-10dp" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText19"
+                android:layout_marginLeft="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="-10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="135dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2ème période"
+                android:id="@+id/textView57"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText20"
+                android:layout_marginLeft="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView57"
+                android:layout_marginStart="91dp" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText21"
+                android:layout_marginEnd="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="170dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="3ème période"
+                android:id="@+id/textView58"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText22"
+                android:layout_marginLeft="200dp"
+                android:layout_marginEnd="65dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/editText23" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText23"
+                android:layout_marginLeft="200dp"
+                android:layout_marginEnd="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="205dp"
+        android:id="@+id/linearLayout5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Prolongation"
+                android:id="@+id/textView59"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText25"
+                android:layout_marginLeft="200dp"
+                android:layout_marginEnd="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="280dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Visiteur"
+                android:id="@+id/textView60"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText24"
+        android:layout_marginLeft="200dp"
+        android:layout_alignBottom="@+id/linearLayout5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="143dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="315dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ère période"
+                android:id="@+id/textView61"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText26"
+                android:layout_marginEnd="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/editText27" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText27"
+                android:layout_marginEnd="51dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="350dp"
+        android:id="@+id/linearLayout6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2ème période"
+                android:id="@+id/textView62"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText28"
+                android:layout_marginStart="91dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView62" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText29"
+                android:layout_marginEnd="49dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="385dp"
+        android:id="@+id/linearLayout7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="3ème période"
+                android:id="@+id/textView63"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText31"
+                android:layout_marginEnd="49dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText30"
+        android:layout_alignBottom="@+id/linearLayout7"
+        android:layout_alignStart="@+id/editText24" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="420dp"
+        android:id="@+id/linearLayout8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Prolongation"
+                android:id="@+id/textView64"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText33"
+                android:layout_marginEnd="49dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText32"
+        android:layout_alignBottom="@+id/linearLayout8"
+        android:layout_alignStart="@+id/editText30" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="465dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retour"
+                android:id="@+id/button"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
