@@ -7,13 +7,19 @@ public class Joueur {
     private String prenom;
     private String position;
     private Integer numero;
+    private Integer buts;
+    private Integer assistances;
+    private Integer equipe_id;
 
-    public Joueur(Integer id, String nom, String prenom, String position, Integer numero) {
+    public Joueur(Integer id, String nom, String prenom, String position, Integer numero, Integer buts, Integer assistances, Integer equipe_id) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.position = position;
         this.numero = numero;
+        this.buts = buts;
+        this.assistances = assistances;
+        this.equipe_id = equipe_id;
     }
 
     public Integer getId() {
@@ -34,5 +40,17 @@ public class Joueur {
 
     public Integer getNumero() {
         return numero;
+    }
+
+    public Integer getButs() {
+        return buts;
+    }
+
+    public Integer getAssistances() {
+        return assistances;
+    }
+
+    public Integer getEquipeId() {
+        return equipe_id;
     }
 }

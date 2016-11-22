@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CreerPartiesActivity extends AppCompatActivity {
+public class CreerPartieActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class CreerPartiesActivity extends AppCompatActivity {
         boutonCreationPartie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(CreerPartiesActivity.this, feuille_pointageActivity.class);
-                CreerPartiesActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(CreerPartieActivity.this, feuille_pointageActivity.class);
+                CreerPartieActivity.this.startActivity(myIntent);
             }
         });
 

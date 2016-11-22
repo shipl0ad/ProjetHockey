@@ -7,14 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CreerJoueurActivity extends AppCompatActivity {
+public class CreerEquipeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_creer_joueur);
+        setContentView(R.layout.activity_creer_equipe);
 
-        Button boutonRetour = (Button) findViewById(R.id.button25);
+        Button boutonRetour = (Button) findViewById(R.id.button12);
         boutonRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -22,18 +22,18 @@ public class CreerJoueurActivity extends AppCompatActivity {
             }
         });
 
-        Button boutonCreer = (Button) findViewById(R.id.boutonCreerJoueur);
+        Button boutonCreer = (Button) findViewById(R.id.button9);
         boutonCreer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    String nom = ((EditText) findViewById(R.id.editText10)).getText().toString();
-                    String prenom = ((EditText) findViewById(R.id.editText9)).getText().toString();
-                    Integer numero = Integer.parseInt(((EditText) findViewById(R.id.editText12)).getText().toString());
-                    String position = ((EditText) findViewById(R.id.editText11)).getText().toString();
-                    if (!((nom.equals("")) || (prenom.equals("")))) {
-                        Joueur joueur = new Joueur(0, nom, prenom, position, numero, 0, 0, 0);
-
+                    GestionBD gestionDB = new GestionBD(CreerEquipeActivity.this);
+                    String nom = ((EditText) findViewById(R.id.editText)).getText().toString();
+                    String ville = ((EditText) findViewById(R.id.editText2)).getText().toString();
+                    String ligue = ((EditText) findViewById(R.id.editText18)).getText().toString();
+                    if (!((nom.equals("")) || (ville.equals("")) || (ligue.equals("")))) {
+                        Equipe equipe = new Equipe(0, nom, ligue, ville);
+                        EquipesBD.ajouterEquipe(gestionDB, equipe);
                         finish();
                     } else {
                         showErrorJoueur();

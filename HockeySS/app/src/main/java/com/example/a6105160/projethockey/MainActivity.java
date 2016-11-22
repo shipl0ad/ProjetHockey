@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        GestionBD gestion = new GestionBD(this);
+        gestion.getWritableDatabase();
 
         Button boutonGestionEquipes = (Button) findViewById(R.id.button2);
         boutonGestionEquipes.setOnClickListener(new OnClickListener() {
