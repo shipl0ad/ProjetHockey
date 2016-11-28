@@ -33,14 +33,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ligue"
-        android:id="@+id/textView14"
-        android:layout_alignTop="@+id/textView13"
-        android:layout_toEndOf="@+id/textView11" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Entraîneur"
         android:id="@+id/textView15"
         android:layout_below="@+id/textView12"
@@ -60,8 +52,8 @@
         android:layout_height="wrap_content"
         android:text="Préposé sécurité"
         android:id="@+id/textView17"
-        android:layout_alignTop="@+id/textView16"
-        android:layout_alignStart="@+id/textView14" />
+        android:layout_above="@+id/textView18"
+        android:layout_toEndOf="@+id/button15" />
 
     <TextView
         android:layout_width="wrap_content"

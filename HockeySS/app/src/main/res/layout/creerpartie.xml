@@ -67,16 +67,6 @@
         android:layout_marginTop="48dp"
         android:id="@+id/linearLayout2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ligue"
-            android:id="@+id/textView26" />
-
-        <Spinner
-            android:layout_width="176dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner4" />
     </LinearLayout>
 
     <TextView
@@ -85,31 +75,30 @@
         android:text="Numéro partie"
         android:id="@+id/textView27"
         android:layout_alignTop="@+id/linearLayout2"
-        android:layout_alignStart="@+id/textView25" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText8"
         android:layout_below="@+id/textView27"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/textView27" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Créer partie"
         android:id="@+id/button23"
-        android:layout_marginTop="68dp"
-        android:layout_below="@+id/textView24"
-        android:layout_alignEnd="@+id/linearLayout2" />
+        android:layout_alignTop="@+id/button24"
+        android:layout_toStartOf="@+id/textView25" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Retour"
         android:id="@+id/button24"
-        android:layout_alignTop="@+id/button23"
-        android:layout_toEndOf="@+id/button23" />
+        android:layout_below="@+id/textView24"
+        android:layout_alignEnd="@+id/textView25"
+        android:layout_marginTop="68dp" />
 
 </RelativeLayout>
