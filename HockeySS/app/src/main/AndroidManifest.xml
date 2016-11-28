@@ -15,13 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GestionEquipesActivity" />
-        <activity android:name=".GestionJoueursActivity" />
-        <activity android:name=".GestionPartiesActivity" />
-        <activity android:name=".CreerJoueurActivity" />
-        <activity android:name=".feuille_pointageActivity" />
+        <activity android:name=".Activities.GestionEquipesActivity" />
+        <activity android:name=".Activities.GestionJoueursActivity" />
+        <activity android:name=".Activities.GestionPartiesActivity" />
+        <activity android:name=".Activities.CreerJoueurActivity" />
+        <activity android:name=".Activities.feuille_pointageActivity" />
         <activity android:name=".CreerPartiesActivity" />
-        <activity android:name=".CreerEquipeActivity"></activity>
+        <activity android:name=".Activities.CreerEquipeActivity"></activity>
     </application>
 
 </manifest>

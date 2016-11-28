@@ -1,4 +1,4 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.a6105160.projethockey.BaseDeDonnes.EquipesBD;
+import com.example.a6105160.projethockey.BaseDeDonnes.GestionBD;
+import com.example.a6105160.projethockey.Modeles.Equipe;
+import com.example.a6105160.projethockey.R;
 
 public class CreerEquipeActivity extends AppCompatActivity {
 
@@ -36,18 +41,18 @@ public class CreerEquipeActivity extends AppCompatActivity {
                         EquipesBD.ajouterEquipe(gestionDB, equipe);
                         finish();
                     } else {
-                        showErrorJoueur();
+                        showErrorEquipe();
                     }
                 } catch (NumberFormatException e) {
-                    showErrorJoueur();
+                    showErrorEquipe();
                 }
             }
         });
 
     }
 
-    private void showErrorJoueur() {
-        Toast message = Toast.makeText(this, "Joueur invalide.", Toast.LENGTH_LONG);
+    private void showErrorEquipe() {
+        Toast message = Toast.makeText(this, "Équipe invalide.", Toast.LENGTH_LONG);
         message.show();
     }
 }

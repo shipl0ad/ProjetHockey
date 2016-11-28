@@ -1,7 +1,13 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.BaseDeDonnes;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.a6105160.projethockey.Modeles.Equipe;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jess3e on 2016-11-21.
@@ -38,5 +44,26 @@ public class EquipesBD {
         valeurs.put(TBL_FIELD_LIGUE, equipe.getLigue());
         valeurs.put(TBL_FIELD_VILLE, equipe.getVille());
         return db.insert(TABLE_NAME, null, valeurs);
+    }
+
+    public static List<Equipe> recupererTousAsArrayEquipes(GestionBD gestionBD) {
+        List<Equipe> listeEquipes = new ArrayList<>();
+        SQLiteDatabase db = gestionBD.getReadableDatabase();
+        String sql = String.format("select * from %s order by %s", TABLE_NAME, TBL_FIELD_ID);
+        Cursor cursor = db.rawQuery(sql, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                Equipe equipe;
+                do {
+                    equipe = new Equipe(
+                            cursor.getInt(cursor.getColumnIndex(TBL_FIELD_ID)),
+                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_NOM)),
+                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_LIGUE)),
+                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_VILLE)));
+                    listeEquipes.add(equipe);
+                } while (cursor.moveToNext());
+            }
+        }
+        return listeEquipes;
     }
 }

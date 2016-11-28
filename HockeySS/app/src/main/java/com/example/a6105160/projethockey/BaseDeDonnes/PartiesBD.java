@@ -1,4 +1,4 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.BaseDeDonnes;
 
 /**
  * Created by Jess3e on 2016-11-21.

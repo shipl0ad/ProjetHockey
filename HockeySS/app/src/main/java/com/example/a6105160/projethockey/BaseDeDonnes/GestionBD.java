@@ -1,4 +1,4 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.BaseDeDonnes;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

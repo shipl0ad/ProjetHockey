@@ -1,4 +1,4 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.Modeles;
 
 public class Joueur {
 

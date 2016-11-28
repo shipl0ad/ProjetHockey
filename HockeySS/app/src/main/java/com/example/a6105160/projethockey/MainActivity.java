@@ -7,6 +7,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.example.a6105160.projethockey.Activities.GestionEquipesActivity;
+import com.example.a6105160.projethockey.Activities.GestionJoueursActivity;
+import com.example.a6105160.projethockey.Activities.GestionPartiesActivity;
+import com.example.a6105160.projethockey.BaseDeDonnes.GestionBD;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -1,7 +1,9 @@
-package com.example.a6105160.projethockey;
+package com.example.a6105160.projethockey.BaseDeDonnes;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.a6105160.projethockey.Modeles.Joueur;
 
 /**
  * Created by Jess3e on 2016-11-21.
