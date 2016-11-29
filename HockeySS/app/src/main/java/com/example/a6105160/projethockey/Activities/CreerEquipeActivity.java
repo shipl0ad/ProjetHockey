@@ -35,23 +35,21 @@ public class CreerEquipeActivity extends AppCompatActivity {
                     GestionBD gestionDB = new GestionBD(CreerEquipeActivity.this);
                     String nom = ((EditText) findViewById(R.id.editText)).getText().toString();
                     String ville = ((EditText) findViewById(R.id.editText2)).getText().toString();
-                    String ligue = ((EditText) findViewById(R.id.editText18)).getText().toString();
-                    if (!((nom.equals("")) || (ville.equals("")) || (ligue.equals("")))) {
-                        Equipe equipe = new Equipe(0, nom, ligue, ville);
+                    if (!((nom.equals("")) || (ville.equals("")))) {
+                        Equipe equipe = new Equipe(0, nom, ville);
                         EquipesBD.ajouterEquipe(gestionDB, equipe);
                         finish();
                     } else {
-                        showErrorEquipe();
+                        afficherErreurEquipe();
                     }
                 } catch (NumberFormatException e) {
-                    showErrorEquipe();
+                    afficherErreurEquipe();
                 }
             }
         });
-
     }
 
-    private void showErrorEquipe() {
+    private void afficherErreurEquipe() {
         Toast message = Toast.makeText(this, "Équipe invalide.", Toast.LENGTH_LONG);
         message.show();
     }

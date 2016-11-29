@@ -4,13 +4,11 @@ public class Equipe {
 
     private Integer id;
     private String nom;
-    private String ligue;
     private String ville;
 
-    public Equipe(Integer id, String nom, String ligue, String ville) {
+    public Equipe(Integer id, String nom, String ville) {
         this.id = id;
         this.nom = nom;
-        this.ligue = ligue;
         this.ville = ville;
     }
 
@@ -20,10 +18,6 @@ public class Equipe {
 
     public String getNom() {
         return nom;
-    }
-
-    public String getLigue() {
-        return ligue;
     }
 
     public String getVille() {

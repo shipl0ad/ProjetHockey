@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class GestionBD extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "bd_hockey.db";
-    private static final Integer DB_VERSION = 2;
+    private static final Integer DB_VERSION = 3;
 
     public GestionBD(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

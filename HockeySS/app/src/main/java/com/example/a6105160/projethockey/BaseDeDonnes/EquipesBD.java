@@ -18,20 +18,17 @@ public class EquipesBD {
 
     public static final String TBL_FIELD_ID = "_id";
     public static final String TBL_FIELD_NOM = "nom";
-    public static final String TBL_FIELD_LIGUE = "ligue";
     public static final String TBL_FIELD_VILLE = "ville";
 
     public static final String[] TBL_FIELD_ID_DEF = {TBL_FIELD_ID, "integer", "primary key autoincrement"};
     public static final String[] TBL_FIELD_NOM_DEF = {TBL_FIELD_NOM, "text"};
-    public static final String[] TBL_FIELD_LIGUE_DEF = {TBL_FIELD_LIGUE, "text"};
     public static final String[] TBL_FIELD_VILLE_DEF = {TBL_FIELD_VILLE, "text"};
 
     public static final String CREATE_TABLE_CMD =
-            String.format("create table %s (%s %s %s, %s %s, %s %s, %s %s)",
+            String.format("create table %s (%s %s %s, %s %s, %s %s)",
                     TABLE_NAME,
                     TBL_FIELD_ID_DEF[0], TBL_FIELD_ID_DEF[1], TBL_FIELD_ID_DEF[2],
                     TBL_FIELD_NOM_DEF[0], TBL_FIELD_NOM_DEF[1],
-                    TBL_FIELD_LIGUE_DEF[0], TBL_FIELD_LIGUE_DEF[1],
                     TBL_FIELD_VILLE_DEF[0], TBL_FIELD_VILLE_DEF[1]);
 
     public static final String DROP_TABLE_CMD =
@@ -41,12 +38,11 @@ public class EquipesBD {
         SQLiteDatabase db = gestionBD.getWritableDatabase();
         ContentValues valeurs = new ContentValues();
         valeurs.put(TBL_FIELD_NOM, equipe.getNom());
-        valeurs.put(TBL_FIELD_LIGUE, equipe.getLigue());
         valeurs.put(TBL_FIELD_VILLE, equipe.getVille());
         return db.insert(TABLE_NAME, null, valeurs);
     }
 
-    public static List<Equipe> recupererTousAsArrayEquipes(GestionBD gestionBD) {
+    public static List<Equipe> recupererEquipes(GestionBD gestionBD) {
         List<Equipe> listeEquipes = new ArrayList<>();
         SQLiteDatabase db = gestionBD.getReadableDatabase();
         String sql = String.format("select * from %s order by %s", TABLE_NAME, TBL_FIELD_ID);
@@ -58,12 +54,24 @@ public class EquipesBD {
                     equipe = new Equipe(
                             cursor.getInt(cursor.getColumnIndex(TBL_FIELD_ID)),
                             cursor.getString(cursor.getColumnIndex(TBL_FIELD_NOM)),
-                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_LIGUE)),
                             cursor.getString(cursor.getColumnIndex(TBL_FIELD_VILLE)));
                     listeEquipes.add(equipe);
                 } while (cursor.moveToNext());
             }
         }
         return listeEquipes;
+    }
+
+    public static List<String> recupererNomEquipe(GestionBD gestionBD) {
+        List<Equipe> listeEquipes = EquipesBD.recupererEquipes(gestionBD);
+        List<String> listeNomEquipes = new ArrayList<>();
+        for (int i = 0; i < listeEquipes.size(); i++) {
+            listeNomEquipes.add(listeEquipes.get(i).getNom());
+        }
+        return listeNomEquipes;
+    }
+
+    public static void retirerEquipe(GestionBD gestionBD, String nomEquipe) {
+
     }
 }

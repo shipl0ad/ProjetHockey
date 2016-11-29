@@ -65,17 +65,6 @@
         </GridLayout>
     </GridLayout>
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_toStartOf="@+id/button18"
-        android:layout_alignEnd="@+id/button19"
-        android:layout_above="@+id/button11"
-        android:layout_below="@+id/gridLayout"
-        android:paddingTop="20px"
-        android:paddingBottom="20px" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,6 +72,19 @@
         android:id="@+id/textView21"
         android:layout_below="@+id/gridLayout"
         android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_toStartOf="@+id/button18"
+        android:layout_alignEnd="@+id/button19"
+        android:choiceMode="singleChoice"
+        android:listSelector="#bbbbbb"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:layout_below="@+id/textView21"
+        android:layout_above="@+id/button11" />
 
     <Button
         android:layout_width="wrap_content"

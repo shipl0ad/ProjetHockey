@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -22,7 +23,7 @@ public class GestionEquipesActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapteurEquipe;
     private ArrayList<Equipe> listeEquipes = new ArrayList<>();
     private ListView listViewEquipes;
-    private int selection;
+    private boolean selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,29 @@ public class GestionEquipesActivity extends AppCompatActivity {
                 GestionEquipesActivity.this.startActivity(myIntent);
             }
         });
+
+        Button boutonRetirer = (Button) findViewById(R.id.button7);
+        boutonRetirer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (selected) {
+                    String nomEquipe = (String) listViewEquipes.getSelectedItem();
+
+                    rafraichirListeEquipes();
+                }
+            }
+        });
+
         listViewEquipes = (ListView) findViewById(R.id.listView);
+        listViewEquipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,long arg3) {
+                view.setSelected(true);
+                selected = true;
+            }
+        });
+
+
     }
 
     @Override
@@ -56,19 +79,13 @@ public class GestionEquipesActivity extends AppCompatActivity {
 
     private void rafraichirListeEquipes() {
         GestionBD gestionBD = new GestionBD(this);
-        listeEquipes.clear();
-        listeEquipes.addAll(EquipesBD.recupererTousAsArrayEquipes(gestionBD));
-        adapteurEquipe = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, trouverNomEquipe(listeEquipes));
+        //listeEquipes.clear();
+        //listeEquipes.addAll(EquipesBD.recupererTousAsArrayEquipes(gestionBD));
+        adapteurEquipe = new ArrayAdapter<> (this, android.R.layout.simple_list_item_1, EquipesBD.recupererNomEquipe(gestionBD));
         listViewEquipes.setAdapter(adapteurEquipe);
         adapteurEquipe.notifyDataSetChanged();
-        selection = 0;
+        selected = false;
     }
 
-    private ArrayList<String> trouverNomEquipe(ArrayList<Equipe> listeEquipes) {
-        ArrayList<String> listeNomEquipes = new ArrayList<>();
-        for (int i = 0; i < listeEquipes.size(); i++) {
-            listeNomEquipes.add(listeEquipes.get(i).getNom());
-        }
-        return listeNomEquipes;
-    }
+
 }

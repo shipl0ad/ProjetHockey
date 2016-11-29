@@ -39,17 +39,17 @@ public class CreerJoueurActivity extends AppCompatActivity {
 
                         finish();
                     } else {
-                        showErrorJoueur();
+                        afficherErreurJoueur();
                     }
                 } catch (NumberFormatException e) {
-                    showErrorJoueur();
+                    afficherErreurJoueur();
                 }
             }
         });
 
     }
 
-    private void showErrorJoueur() {
+    private void afficherErreurJoueur() {
         Toast message = Toast.makeText(this, "Joueur invalide.", Toast.LENGTH_LONG);
         message.show();
     }
