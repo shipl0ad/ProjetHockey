@@ -15,8 +15,8 @@ public class GestionPartiesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_parties);
 
-        Button boutonCreationPartie = (Button) findViewById(R.id.button20);
-        boutonCreationPartie.setOnClickListener(new View.OnClickListener() {
+        Button boutonCreer = (Button) findViewById(R.id.button20);
+        boutonCreer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(GestionPartiesActivity.this, CreerPartieActivity.class);
