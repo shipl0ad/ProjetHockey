@@ -4,137 +4,223 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Créer Équipe"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Créer Équipe"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="125dp"
+            android:textAlignment="center" />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nom Équipe"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/editText" />
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ville"
-        android:id="@+id/textView5"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/editText"
-        android:layout_below="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
+        android:id="@+id/scrollView2" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="50dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignEnd="@+id/textView5"
-        android:layout_alignStart="@+id/textView5" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entraîneur"
-        android:id="@+id/textView7"
-        android:layout_above="@+id/editText3"
-        android:layout_alignParentStart="true" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editText" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Préposé Sécurité"
-        android:id="@+id/textView8"
-        android:layout_above="@+id/editText4"
-        android:layout_alignStart="@+id/editText2" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nom Équipe"
+                                android:id="@+id/textView4"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignStart="@+id/editText"
+                                android:layout_marginTop="26dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:layout_alignTop="@+id/editText3"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignStart="@+id/textView8" />
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText"
+                                android:singleLine="true"
+                                android:layout_below="@+id/textView4"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="21dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assistant Entraîneur"
-        android:id="@+id/textView9"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText3" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ville"
+                                android:id="@+id/textView5"
+                                android:layout_above="@+id/editText"
+                                android:layout_alignStart="@+id/editText2" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText5"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editText3" />
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText2"
+                                android:layout_marginEnd="66dp"
+                                android:singleLine="true"
+                                android:layout_below="@+id/textView5"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText6"
-        android:layout_below="@+id/editText5"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/textView9" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="100dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gérant"
-        android:id="@+id/textView10"
-        android:layout_below="@+id/editText4"
-        android:layout_alignStart="@+id/editText4" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText7"
-        android:layout_below="@+id/textView10"
-        android:layout_alignEnd="@+id/editText4"
-        android:layout_alignStart="@+id/textView10" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Entraîneur"
+                                android:id="@+id/textView7"
+                                android:layout_above="@+id/editText3"
+                                android:layout_alignStart="@+id/editText3" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Créer équipe"
-        android:id="@+id/button9"
-        android:layout_marginBottom="38dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView4" />
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText3"
+                                android:singleLine="true"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="21dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retour"
-        android:id="@+id/button12"
-        android:layout_alignTop="@+id/button9"
-        android:layout_alignEnd="@+id/textView10" />
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText4"
+                                android:layout_alignTop="@+id/editText3"
+                                android:layout_alignStart="@+id/textView8"
+                                android:singleLine="true"
+                                android:layout_alignEnd="@+id/textView8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Préposé Sécurité"
+                                android:id="@+id/textView8"
+                                android:layout_above="@+id/editText4"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="56dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="200dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Assistant Entraîneur"
+                                android:id="@+id/textView9"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="21dp" />
+
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText5"
+                                android:layout_below="@+id/textView9"
+                                android:inputType="text"
+                                android:layout_alignEnd="@+id/textView9"
+                                android:singleLine="true"
+                                android:layout_alignStart="@+id/textView9" />
+
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText6"
+                                android:layout_below="@+id/editText5"
+                                android:layout_alignEnd="@+id/textView9"
+                                android:singleLine="true"
+                                android:layout_alignStart="@+id/editText5" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gérant"
+                                android:id="@+id/textView10"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignStart="@+id/editText7" />
+
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText7"
+                                android:layout_marginEnd="56dp"
+                                android:singleLine="true"
+                                android:layout_below="@+id/textView10"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="420dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retour"
+                android:id="@+id/button12"
+                android:layout_alignTop="@+id/button9"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créer équipe"
+                android:id="@+id/button9"
+                android:layout_marginBottom="39dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
 
 </RelativeLayout>
