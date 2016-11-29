@@ -3,110 +3,241 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Afficher équipe"
-        android:id="@+id/textView11"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nom d&apos;équipe"
-        android:id="@+id/textView12"
-        android:layout_below="@+id/textView11"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Afficher équipe"
+            android:id="@+id/textView11"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ville"
-        android:id="@+id/textView13"
-        android:layout_alignTop="@+id/textView12"
-        android:layout_alignStart="@+id/textView11"
-        android:layout_marginStart="30dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entraîneur"
-        android:id="@+id/textView15"
-        android:layout_below="@+id/textView12"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom d&apos;équipe: "
+                android:id="@+id/textView12"
+                android:layout_below="@+id/textView11"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gérant"
-        android:id="@+id/textView16"
-        android:layout_alignTop="@+id/textView15"
-        android:layout_alignStart="@+id/textView13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/NomEquipe" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Préposé sécurité"
-        android:id="@+id/textView17"
-        android:layout_above="@+id/textView18"
-        android:layout_toEndOf="@+id/button15" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assistant entraîneur 1"
-        android:id="@+id/textView18"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView15"
-        android:layout_toStartOf="@+id/textView16" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ville: "
+                android:id="@+id/textView13"
+                android:layout_below="@+id/textView12"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assistant entraîneur 2"
-        android:id="@+id/textView19"
-        android:layout_alignTop="@+id/textView18"
-        android:layout_alignEnd="@+id/textView17" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/VilleEquipe" />
+        </LinearLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Afficher joueur"
-        android:id="@+id/button13"
-        android:layout_below="@+id/textView18"
-        android:layout_alignStart="@+id/button14" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Modifier joueur"
-        android:id="@+id/button14"
-        android:layout_below="@+id/button15"
-        android:layout_alignStart="@+id/textView11" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entraîneur: "
+                android:id="@+id/textView15"
+                android:layout_below="@+id/textView12"
+                android:layout_alignParentStart="true" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retirer joueur"
-        android:id="@+id/button15"
-        android:layout_below="@+id/button13"
-        android:layout_alignEnd="@+id/button14"
-        android:layout_alignStart="@+id/button13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/EntraineurEquipe" />
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retour"
-        android:id="@+id/button16"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button14"
-        android:layout_toStartOf="@+id/textView17" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gérant: "
+                android:id="@+id/textView16"
+                android:layout_below="@+id/textView13"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/GerantEquipe" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Préposé sécurité: "
+                android:id="@+id/textView17"
+                android:layout_alignBaseline="@+id/textView18"
+                android:layout_alignBottom="@+id/textView18"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/PreposeEquipe" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assistant entraîneur 1: "
+                android:id="@+id/textView18"
+                android:layout_below="@+id/textView15"
+                android:layout_toStartOf="@+id/textView16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/AssistantEquipe" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assistant entraîneur 2: "
+                android:id="@+id/textView19"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/AssistantEquipe2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Afficher joueur"
+                android:id="@+id/button13"
+                android:layout_below="@+id/textView18"
+                android:layout_alignStart="@+id/button14"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier joueur"
+                android:id="@+id/button14"
+                android:layout_below="@+id/button15"
+                android:layout_alignStart="@+id/textView11"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retirer joueur"
+                android:id="@+id/button15"
+                android:layout_below="@+id/button13"
+                android:layout_alignEnd="@+id/button14"
+                android:layout_alignStart="@+id/button13"
+                android:layout_gravity="left|center_vertical" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView5"
+                android:layout_above="@+id/button16" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retour"
+                android:id="@+id/button16"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

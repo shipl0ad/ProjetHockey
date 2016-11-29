@@ -62,8 +62,7 @@ public class EquipesBD {
         return listeEquipes;
     }
 
-    public static List<String> recupererNomEquipe(GestionBD gestionBD) {
-        List<Equipe> listeEquipes = EquipesBD.recupererEquipes(gestionBD);
+    public static List<String> recupererNomEquipe(List<Equipe> listeEquipes) {
         List<String> listeNomEquipes = new ArrayList<>();
         for (int i = 0; i < listeEquipes.size(); i++) {
             listeNomEquipes.add(listeEquipes.get(i).getNom());
@@ -71,7 +70,8 @@ public class EquipesBD {
         return listeNomEquipes;
     }
 
-    public static void retirerEquipe(GestionBD gestionBD, String nomEquipe) {
-
+    public static void retirerEquipeParNom(GestionBD gestionBD, int id) {
+        SQLiteDatabase db = gestionBD.getWritableDatabase();
+        db.delete(TABLE_NAME,String.format("%s = ?",TBL_FIELD_ID),new String[] {String.valueOf(id)});
     }
 }

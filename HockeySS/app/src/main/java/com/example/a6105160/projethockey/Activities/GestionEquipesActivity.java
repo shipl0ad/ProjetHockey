@@ -23,13 +23,32 @@ public class GestionEquipesActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapteurEquipe;
     private ArrayList<Equipe> listeEquipes = new ArrayList<>();
     private ListView listViewEquipes;
-    private boolean selected;
+    private int selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_equipes);
+        creerActionBoutons();
+        listViewEquipes = (ListView) findViewById(R.id.listView);
+        listViewEquipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long arg3) {
+                view.setSelected(true);
+                selection = position + 1;
+            }
+        });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        rafraichirListeEquipes();
+        selection = 0;
+    }
+
+    private void creerActionBoutons() {
         Button boutonRetour = (Button) findViewById(R.id.button11);
         boutonRetour.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,41 +70,29 @@ public class GestionEquipesActivity extends AppCompatActivity {
         boutonRetirer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (selected) {
-                    String nomEquipe = (String) listViewEquipes.getSelectedItem();
-
+                if (selection > 0) {
+                    Equipe equipe = listeEquipes.get(selection - 1);
+                    GestionBD gestionBD = new GestionBD(GestionEquipesActivity.this);
+                    EquipesBD.retirerEquipeParNom(gestionBD, equipe.getId());
                     rafraichirListeEquipes();
+                } else {
+                    afficherErreurSelection();
                 }
             }
         });
-
-        listViewEquipes = (ListView) findViewById(R.id.listView);
-        listViewEquipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,long arg3) {
-                view.setSelected(true);
-                selected = true;
-            }
-        });
-
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        rafraichirListeEquipes();
     }
 
     private void rafraichirListeEquipes() {
         GestionBD gestionBD = new GestionBD(this);
-        //listeEquipes.clear();
-        //listeEquipes.addAll(EquipesBD.recupererTousAsArrayEquipes(gestionBD));
-        adapteurEquipe = new ArrayAdapter<> (this, android.R.layout.simple_list_item_1, EquipesBD.recupererNomEquipe(gestionBD));
+        listeEquipes.clear();
+        listeEquipes.addAll(EquipesBD.recupererEquipes(gestionBD));
+        adapteurEquipe = new ArrayAdapter<> (this, android.R.layout.simple_list_item_1, EquipesBD.recupererNomEquipe(listeEquipes));
         listViewEquipes.setAdapter(adapteurEquipe);
         adapteurEquipe.notifyDataSetChanged();
-        selected = false;
     }
 
-
+    private void afficherErreurSelection() {
+        Toast message = Toast.makeText(this, "Veuillez sélectionner une équipe dans la liste.", Toast.LENGTH_LONG);
+        message.show();
+    }
 }
