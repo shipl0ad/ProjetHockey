@@ -21,7 +21,8 @@
         <activity android:name=".Activities.CreerJoueurActivity" />
         <activity android:name=".Activities.feuille_pointageActivity" />
         <activity android:name=".Activities.CreerPartieActivity" />
-        <activity android:name=".Activities.CreerEquipeActivity"></activity>
+        <activity android:name=".Activities.CreerEquipeActivity" />
+        <activity android:name=".Activities.AfficherEquipeActivity"></activity>
     </application>
 
 </manifest>

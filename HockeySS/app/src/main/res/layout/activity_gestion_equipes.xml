@@ -113,6 +113,7 @@
                         android:layout_alignEnd="@+id/button19"
                         android:choiceMode="singleChoice"
                         android:listSelector="#bbbbbb"
+                        android:nestedScrollingEnabled="true"
                         android:paddingTop="20dp"
                         android:paddingBottom="20dp" />
                 </RelativeLayout>

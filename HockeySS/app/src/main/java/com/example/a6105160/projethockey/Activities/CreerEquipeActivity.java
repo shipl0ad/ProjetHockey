@@ -36,7 +36,7 @@ public class CreerEquipeActivity extends AppCompatActivity {
                     String nom = ((EditText) findViewById(R.id.editText)).getText().toString();
                     String ville = ((EditText) findViewById(R.id.editText2)).getText().toString();
                     if (!((nom.equals("")) || (ville.equals("")))) {
-                        Equipe equipe = new Equipe(0, nom, ville);
+                        Equipe equipe = new Equipe(0, nom, ville, 1);
                         EquipesBD.ajouterEquipe(gestionDB, equipe);
                         finish();
                     } else {

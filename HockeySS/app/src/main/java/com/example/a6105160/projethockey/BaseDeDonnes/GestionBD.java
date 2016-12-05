@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.a6105160.projethockey.Modeles.Equipe;
+
 public class GestionBD extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "bd_hockey.db";

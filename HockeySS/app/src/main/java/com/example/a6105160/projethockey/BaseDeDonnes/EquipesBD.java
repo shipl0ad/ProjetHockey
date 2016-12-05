@@ -19,17 +19,20 @@ public class EquipesBD {
     public static final String TBL_FIELD_ID = "_id";
     public static final String TBL_FIELD_NOM = "nom";
     public static final String TBL_FIELD_VILLE = "ville";
+    public static final String TBL_FIELD_VALIDE = "valide";
 
     public static final String[] TBL_FIELD_ID_DEF = {TBL_FIELD_ID, "integer", "primary key autoincrement"};
     public static final String[] TBL_FIELD_NOM_DEF = {TBL_FIELD_NOM, "text"};
     public static final String[] TBL_FIELD_VILLE_DEF = {TBL_FIELD_VILLE, "text"};
+    public static final String[] TBL_FIELD_VALIDE_DEF = {TBL_FIELD_VALIDE, "integer"};
 
     public static final String CREATE_TABLE_CMD =
-            String.format("create table %s (%s %s %s, %s %s, %s %s)",
+            String.format("create table %s (%s %s %s, %s %s, %s %s, %s %s)",
                     TABLE_NAME,
                     TBL_FIELD_ID_DEF[0], TBL_FIELD_ID_DEF[1], TBL_FIELD_ID_DEF[2],
                     TBL_FIELD_NOM_DEF[0], TBL_FIELD_NOM_DEF[1],
-                    TBL_FIELD_VILLE_DEF[0], TBL_FIELD_VILLE_DEF[1]);
+                    TBL_FIELD_VILLE_DEF[0], TBL_FIELD_VILLE_DEF[1],
+                    TBL_FIELD_VALIDE_DEF[0], TBL_FIELD_VALIDE_DEF[1]);
 
     public static final String DROP_TABLE_CMD =
             String.format("drop table if exists %s", TABLE_NAME);
@@ -39,6 +42,7 @@ public class EquipesBD {
         ContentValues valeurs = new ContentValues();
         valeurs.put(TBL_FIELD_NOM, equipe.getNom());
         valeurs.put(TBL_FIELD_VILLE, equipe.getVille());
+        valeurs.put(TBL_FIELD_VALIDE, equipe.getValide());
         return db.insert(TABLE_NAME, null, valeurs);
     }
 
@@ -54,7 +58,8 @@ public class EquipesBD {
                     equipe = new Equipe(
                             cursor.getInt(cursor.getColumnIndex(TBL_FIELD_ID)),
                             cursor.getString(cursor.getColumnIndex(TBL_FIELD_NOM)),
-                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_VILLE)));
+                            cursor.getString(cursor.getColumnIndex(TBL_FIELD_VILLE)),
+                            cursor.getInt(cursor.getColumnIndex(TBL_FIELD_VALIDE)));
                     listeEquipes.add(equipe);
                 } while (cursor.moveToNext());
             }

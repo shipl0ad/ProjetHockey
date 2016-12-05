@@ -5,11 +5,13 @@ public class Equipe {
     private Integer id;
     private String nom;
     private String ville;
+    private Integer valide;
 
-    public Equipe(Integer id, String nom, String ville) {
+    public Equipe(Integer id, String nom, String ville, Integer valide) {
         this.id = id;
         this.nom = nom;
         this.ville = ville;
+        this.valide = valide;
     }
 
     public Integer getId() {
@@ -22,5 +24,9 @@ public class Equipe {
 
     public String getVille() {
         return ville;
+    }
+
+    public Integer getValide() {
+        return valide;
     }
 }
