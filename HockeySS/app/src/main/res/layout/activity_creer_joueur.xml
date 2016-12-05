@@ -8,109 +8,169 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Créer un joueur"
         android:id="@+id/textView29"
-        android:layout_marginTop="28dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prénom"
-        android:id="@+id/textView28"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/textView29"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="37dp" />
+        android:id="@+id/scrollView3" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText9"
-        android:layout_below="@+id/textView28"
-        android:layout_alignStart="@+id/textView28"
-        android:layout_toStartOf="@+id/textView29" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nom"
-        android:id="@+id/textView30"
-        android:layout_alignTop="@+id/textView28"
-        android:layout_alignStart="@+id/textView29"
-        android:layout_marginStart="56dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText10"
-        android:layout_alignTop="@+id/editText9"
-        android:layout_alignStart="@+id/textView30"
-        android:layout_alignEnd="@+id/textView29" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Position"
-        android:id="@+id/textView31"
-        android:layout_below="@+id/editText9"
-        android:layout_alignStart="@+id/editText9"
-        android:layout_marginTop="45dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Numéro"
-        android:id="@+id/textView32"
-        android:layout_alignTop="@+id/textView31"
-        android:layout_alignStart="@+id/editText10" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText11"
-        android:layout_below="@+id/textView31"
-        android:layout_alignStart="@+id/textView31"
-        android:layout_alignEnd="@+id/editText9" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText12"
-        android:layout_alignTop="@+id/editText11"
-        android:layout_alignStart="@+id/textView32"
-        android:layout_alignEnd="@+id/textView29" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="300dp">
-
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="78dp">
+            android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Créer le joueur"
-                android:id="@+id/boutonCreerJoueur"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="34dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Retour"
-                android:id="@+id/button25"
-                android:layout_gravity="right"
-                android:layout_alignBaseline="@+id/boutonCreerJoueur"
-                android:layout_alignBottom="@+id/boutonCreerJoueur"
-                android:layout_toEndOf="@+id/boutonCreerJoueur"
-                android:layout_marginStart="55dp" />
-        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
 
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prénom"
+                        android:id="@+id/textView28"
+                        android:layout_marginTop="37dp"
+                        android:layout_below="@+id/textView29"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="37dp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/editText9"
+                        android:layout_below="@+id/textView28"
+                        android:layout_alignStart="@+id/textView28"
+                        android:layout_toStartOf="@+id/textView29"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nom"
+                        android:id="@+id/textView30"
+                        android:layout_alignTop="@+id/textView28"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="105dp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText10"
+                        android:layout_alignTop="@+id/editText9"
+                        android:layout_alignStart="@+id/textView30"
+                        android:singleLine="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Position"
+                        android:id="@+id/textView31"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="27dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Numéro"
+                        android:id="@+id/textView32"
+                        android:layout_marginLeft="0dp"
+                        android:layout_alignTop="@+id/textView31"
+                        android:layout_alignStart="@+id/editText12" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText11"
+                        android:layout_marginRight="0dp"
+                        android:layout_alignTop="@+id/editText12"
+                        android:layout_alignStart="@+id/textView31"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText12"
+                        android:layout_marginRight="84dp"
+                        android:layout_marginEnd="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:singleLine="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Équipe"
+                    android:id="@+id/textView26"
+                    android:layout_gravity="center" />
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Créer le joueur"
+                        android:id="@+id/boutonCreerJoueur"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="34dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retour"
+                        android:id="@+id/button25"
+                        android:layout_gravity="right"
+                        android:layout_alignBaseline="@+id/boutonCreerJoueur"
+                        android:layout_alignBottom="@+id/boutonCreerJoueur"
+                        android:layout_toEndOf="@+id/boutonCreerJoueur"
+                        android:layout_marginStart="55dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

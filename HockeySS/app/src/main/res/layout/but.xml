@@ -90,8 +90,8 @@
             android:layout_height="wrap_content"
             android:text="BUT"
             android:id="@+id/button42"
-            android:layout_below="@+id/textView51"
-            android:layout_alignStart="@+id/spinner6" />
+            android:layout_above="@+id/button43"
+            android:layout_alignStart="@+id/button43" />
 
         <Button
             android:layout_width="wrap_content"
@@ -101,6 +101,25 @@
             android:layout_alignParentBottom="true"
             android:layout_alignEnd="@+id/textView48"
             android:layout_marginBottom="37dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="TEMPS"
+            android:id="@+id/textView65"
+            android:layout_above="@+id/button42"
+            android:layout_alignEnd="@+id/textView49" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editText34"
+            android:layout_above="@+id/button42"
+            android:layout_toEndOf="@+id/button42" />
+
     </RelativeLayout>
 
 </RelativeLayout>
