@@ -134,7 +134,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SET"
+                android:text="START"
                 android:id="@+id/button29" />
 
             <Button
@@ -302,6 +302,14 @@
                 android:textSize="35dp"
                 android:layout_below="@+id/textView14"
                 android:layout_toStartOf="@+id/button36" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESET TIMER"
+                android:id="@+id/button44"
+                android:layout_above="@+id/button35"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
     </LinearLayout>
