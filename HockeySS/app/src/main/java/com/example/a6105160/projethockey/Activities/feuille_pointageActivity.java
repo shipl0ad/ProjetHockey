@@ -1,5 +1,6 @@
 package com.example.a6105160.projethockey.Activities;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,7 +28,32 @@ public class feuille_pointageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feuille_de_pointage);
 
+        Button boutonformations1 = (Button) findViewById(R.id.button);
+        boutonformations1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(feuille_pointageActivity.this, formationActivity.class);
+                feuille_pointageActivity.this.startActivity(myIntent);
+            }
+        });
 
+        Button boutonformations2 = (Button) findViewById(R.id.button26);
+        boutonformations2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(feuille_pointageActivity.this, formationActivity.class);
+                feuille_pointageActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button boutonbut = (Button) findViewById(R.id.button31);
+        boutonbut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(feuille_pointageActivity.this, ButActivity.class);
+                feuille_pointageActivity.this.startActivity(myIntent);
+            }
+        });
         final TextView ed=(TextView)findViewById(R.id.editText34);
 
         Button b1=(Button)findViewById(R.id.button33);
@@ -53,6 +79,14 @@ public class feuille_pointageActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button boutonterminer = (Button) findViewById(R.id.button37);
+        boutonterminer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         Button b2=(Button)findViewById(R.id.button34);
 
         b2.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +97,8 @@ public class feuille_pointageActivity extends AppCompatActivity {
 
                 int a=Integer.parseInt(ed.getText().toString());
 
-                    int b=a+1;
-                    ed.setText(new Integer(b).toString());
+                int b=a+1;
+                ed.setText(new Integer(b).toString());
             }
 
         });
@@ -193,23 +227,23 @@ public class feuille_pointageActivity extends AppCompatActivity {
                 String newtime = hours + ":" + minutes + ":" + seconds;
 
                 if (newtime.equals("0:0:0")) {
-                    tv_time.setText("00:00:00");
+                    tv_time.setText("00:00");
                 } else if ((String.valueOf(hours).length() == 1) && (String.valueOf(minutes).length() == 1) && (String.valueOf(seconds).length() == 1)) {
-                    tv_time.setText("0" + hours + ":0" + minutes + ":0" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 } else if ((String.valueOf(hours).length() == 1) && (String.valueOf(minutes).length() == 1)) {
-                    tv_time.setText("0" + hours + ":0" + minutes + ":" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 } else if ((String.valueOf(hours).length() == 1) && (String.valueOf(seconds).length() == 1)) {
-                    tv_time.setText("0" + hours + ":" + minutes + ":0" + seconds);
+                    tv_time.setText(minutes + ":0" + seconds);
                 } else if ((String.valueOf(minutes).length() == 1) && (String.valueOf(seconds).length() == 1)) {
-                    tv_time.setText(hours + ":0" + minutes + ":0" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 } else if (String.valueOf(hours).length() == 1) {
-                    tv_time.setText("0" + hours + ":" + minutes + ":" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 } else if (String.valueOf(minutes).length() == 1) {
-                    tv_time.setText(hours + ":0" + minutes + ":" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 } else if (String.valueOf(seconds).length() == 1) {
-                    tv_time.setText(hours + ":" + minutes + ":0" + seconds);
+                    tv_time.setText(minutes + ":" + "0" + seconds);
                 } else {
-                    tv_time.setText(hours + ":" + minutes + ":" + seconds);
+                    tv_time.setText(minutes + ":" + seconds);
                 }
 
 
@@ -222,5 +256,5 @@ public class feuille_pointageActivity extends AppCompatActivity {
         }.start();
     }
 
-    }
+}
 
