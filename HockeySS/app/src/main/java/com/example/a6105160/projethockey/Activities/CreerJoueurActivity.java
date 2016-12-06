@@ -1,5 +1,6 @@
 package com.example.a6105160.projethockey.Activities;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,7 +21,6 @@ import com.example.a6105160.projethockey.R;
 import java.util.ArrayList;
 
 public class CreerJoueurActivity extends AppCompatActivity {
-
     private ArrayAdapter<String> adapteurEquipe;
     private ArrayList<Equipe> listeEquipes = new ArrayList<>();
     private Spinner SpinnerEquipes;
@@ -32,11 +32,17 @@ public class CreerJoueurActivity extends AppCompatActivity {
         setContentView(R.layout.activity_creer_joueur);
         creerActionBoutons();
         SpinnerEquipes = (Spinner) findViewById(R.id.spinner);
-        SpinnerEquipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long arg3) {
-                view.setSelected(true);
+        SpinnerEquipes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long arg3) {
+
                 selection = position + 1;
+
+
+            }
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
             }
         });
 
@@ -48,6 +54,8 @@ public class CreerJoueurActivity extends AppCompatActivity {
         rafraichirListeEquipes();
         selection = 0;
     }
+
+
 
     private void creerActionBoutons() {
         Button boutonRetour = (Button) findViewById(R.id.button25);
@@ -81,8 +89,8 @@ public class CreerJoueurActivity extends AppCompatActivity {
         });
 
 
-
     }
+
     private void rafraichirListeEquipes() {
         GestionBD gestionBD = new GestionBD(this);
         listeEquipes.clear();
@@ -91,6 +99,7 @@ public class CreerJoueurActivity extends AppCompatActivity {
         SpinnerEquipes.setAdapter(adapteurEquipe);
         adapteurEquipe.notifyDataSetChanged();
     }
+
 
     private void afficherErreurSelection() {
         Toast message = Toast.makeText(this, "Veuillez sélectionner une équipe dans la liste.", Toast.LENGTH_LONG);
