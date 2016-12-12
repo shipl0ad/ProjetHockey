@@ -4,23 +4,20 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.a6105160.projethockey.Modeles.Equipe;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jess3e on 2016-11-21.
+ * Created by Jess3e on 2016-12-06.
  */
-public class EquipesBD {
-
-    public static final String TABLE_NAME = "equipes";
+public class LigueBD {
+    public static final String TABLE_NAME = "ligues";
 
     public static final String TBL_FIELD_ID = "_id";
     public static final String TBL_FIELD_NOM = "nom";
-    public static final String TBL_FIELD_VILLE = "ville";
+    public static final String TBL_FIELD_PERIODE = "periode";
     public static final String TBL_FIELD_VALIDE = "valide";
-
+/*
     public static final String[] TBL_FIELD_ID_DEF = {TBL_FIELD_ID, "integer", "primary key autoincrement"};
     public static final String[] TBL_FIELD_NOM_DEF = {TBL_FIELD_NOM, "text"};
     public static final String[] TBL_FIELD_VILLE_DEF = {TBL_FIELD_VILLE, "text"};
@@ -89,5 +86,5 @@ public class EquipesBD {
     public static void retirerEquipeParNom(GestionBD gestionBD, int id) {
         SQLiteDatabase db = gestionBD.getWritableDatabase();
         db.delete(TABLE_NAME,String.format("%s = ?",TBL_FIELD_ID),new String[] {String.valueOf(id)});
-    }
+    }*/
 }

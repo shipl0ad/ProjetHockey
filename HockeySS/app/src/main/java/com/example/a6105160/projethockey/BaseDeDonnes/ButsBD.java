@@ -19,7 +19,7 @@ public class ButsBD {
     public static final String[] TBL_FIELD_PARTIE_DEF = {TBL_FIELD_PARTIE, "integer"};
     public static final String[] TBL_FIELD_MARQUEUR_DEF = {TBL_FIELD_MARQUEUR, "integer"};
     public static final String[] TBL_FIELD_ASSISTEUR_1_DEF = {TBL_FIELD_ASSISTEUR_1, "integer"};
-    public static final String[] TBL_FIELD_ASSISTEUR_2_DEF = {TBL_FIELD_ASSISTEUR_2, "text"};
+    public static final String[] TBL_FIELD_ASSISTEUR_2_DEF = {TBL_FIELD_ASSISTEUR_2, "integer"};
     public static final String[] TBL_FIELD_TEMPS_DEF = {TBL_FIELD_TEMPS, "text"};
     public static final String[] TBL_FIELD_PERIODE_DEF = {TBL_FIELD_PERIODE, "integer"};
 

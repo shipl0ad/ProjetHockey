@@ -5,11 +5,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.a6105160.projethockey.Modeles.Equipe;
+import com.example.a6105160.projethockey.Seeders.DatabaseSeeder;
 
 public class GestionBD extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "bd_hockey.db";
-    private static final Integer DB_VERSION = 3;
+    private static final Integer DB_VERSION = 4;
 
     public GestionBD(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.a6105160.projethockey.Adapteurs.AdapteurListeEquipes;
 import com.example.a6105160.projethockey.BaseDeDonnes.EquipesBD;
 import com.example.a6105160.projethockey.BaseDeDonnes.GestionBD;
 import com.example.a6105160.projethockey.Modeles.Equipe;
@@ -20,7 +21,7 @@ import java.util.List;
 
 public class GestionEquipesActivity extends AppCompatActivity {
 
-    private ArrayAdapter<String> adapteurEquipe;
+    private AdapteurListeEquipes adapteurEquipe;
     private ArrayList<Equipe> listeEquipes = new ArrayList<>();
     private ListView listViewEquipes;
     private int selection;
@@ -31,10 +32,11 @@ public class GestionEquipesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gestion_equipes);
         creerActionBoutons();
         listViewEquipes = (ListView) findViewById(R.id.listView);
+        adapteurEquipe = new AdapteurListeEquipes(this, listeEquipes);
+        listViewEquipes.setAdapter(adapteurEquipe);
         listViewEquipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long arg3) {
-                view.setSelected(true);
                 selection = position + 1;
             }
         });
@@ -85,10 +87,11 @@ public class GestionEquipesActivity extends AppCompatActivity {
     private void rafraichirListeEquipes() {
         GestionBD gestionBD = new GestionBD(this);
         listeEquipes.clear();
-        listeEquipes.addAll(EquipesBD.recupererEquipes(gestionBD));
-        adapteurEquipe = new ArrayAdapter<> (this, android.R.layout.simple_list_item_1, EquipesBD.recupererNomEquipe(listeEquipes));
-        listViewEquipes.setAdapter(adapteurEquipe);
+        listeEquipes.addAll(EquipesBD.recupererEquipesValides(gestionBD));
+        adapteurEquipe = (AdapteurListeEquipes) listViewEquipes.getAdapter();
+        adapteurEquipe.setPairs(listeEquipes);
         adapteurEquipe.notifyDataSetChanged();
+        selection = 0;
     }
 
     private void afficherErreurSelection() {
